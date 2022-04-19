@@ -25,9 +25,11 @@ const App = () => (
   <Wrapper>
     <Header>
       <Typewriter
-        options={{
-          strings: "hello,<br>this is eutina wei,<br>an amateur photographer<br>based in pittsburgh.",
-          autoStart: true,
+        onInit={(typewriter) => {
+          typewriter.typeString('hello,<br>this is eutina,<br>an amateur photographer<br>based in pittsburgh.')
+            .pauseFor(1000)
+            .deleteAll()
+            .start();
         }}
       />
     </Header>

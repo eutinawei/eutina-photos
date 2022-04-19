@@ -1,0 +1,15 @@
+html, body{
+  cursor: none;
+}
+a:hover{
+  cursor: none;
+}
+input:hover{
+  cursor: none;
+}
+textarea:hover{
+  cursor: none;
+}
+button:hover{
+  cursor: none;
+}
