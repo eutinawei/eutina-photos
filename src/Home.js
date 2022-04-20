@@ -1,21 +1,47 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+import sea from './assets/sea.png'
 import Cursor from './components/Cursor'
 import Header from './components/Header'
-import sea from './assets/sea.png'
+import Menu from './components/Menu'
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`
 
 const Wrapper = styled.div`
   min-height: 100vh;
   height: 100%;
   margin: -8px;
-  font-family: "Courier";
+`
+
+const Content = styled.div`
+  animation: ${fadeIn} 1.5s;
+`
+
+const Background = styled.div`
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1000;
   background: url(${sea}) no-repeat center/cover;
 `
 
-const Home = () => (
+const Home = () =>  (
   <Wrapper>
+    <Background />
     <Cursor />
-    <Header />
+    <Content>
+      <Header />
+      <Menu />
+    </Content>
   </Wrapper>
 )
 

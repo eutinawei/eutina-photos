@@ -15,7 +15,7 @@ const BigCursor = styled.div`
   border: 2px solid white;
   height: 30px;
   width: 30px;
-  transition: all 500ms ease-out;
+  transition: all .3s ease-out;
 `
 
 const SmallCursor = styled.div`

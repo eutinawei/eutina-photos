@@ -5,6 +5,13 @@ import Icon from './Icon'
 import github from '../assets/github.png'
 import linkedin from '../assets/linkedin.png'
 
+const Outer = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+`
+
 const Wrapper = styled.div`
   padding: 50px;
   display: flex;
@@ -18,15 +25,17 @@ const Navigation = styled.div`
 `
 
 const Header = () => (
-  <Wrapper>
-    <Button title='eutina wei' />
+  <Outer>
+    <Wrapper>
+      <Button title='eutina wei' />
       <Navigation>
         <Button title='about' />
         <Button title='contact' />
         <Icon img={github} link='https://github.com/eutinawei/pui-hw8' />
         <Icon img={linkedin} link='https://www.linkedin.com/in/eutinawei/' />
       </Navigation>
-  </Wrapper>
+    </Wrapper>
+  </Outer>
 )
 
 export default Header;

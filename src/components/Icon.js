@@ -4,8 +4,8 @@ import styled from 'styled-components'
 const Wrapper = styled.button`
   background: url(${props => props.img}) no-repeat center/cover;
   border: 0px;
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   margin-right: 20px;
 `
 

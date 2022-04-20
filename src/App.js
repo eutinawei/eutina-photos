@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   background: url(${sea}) no-repeat center/cover;
 `
 
-const Header = styled.div`
+const Text = styled.div`
   position: absolute;
   right: 20%;
   top: 38%;
@@ -23,7 +23,7 @@ const Header = styled.div`
 
 const App = () => (
   <Wrapper>
-    <Header>
+    <Text>
       <Typewriter
         onInit={(typewriter) => {
           typewriter.typeString('hello,<br>this is eutina,<br>an amateur photographer<br>based in pittsburgh.')
@@ -32,7 +32,7 @@ const App = () => (
             .start();
         }}
       />
-    </Header>
+    </Text>
   </Wrapper>
 )
 
