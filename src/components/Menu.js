@@ -42,12 +42,7 @@ const locations = [
 
 const Menu = () => {
   const backgroundRef = useRef(null);
-
-  const horizontalScroll = (event) => {
-    const delta = Math.max(-1, Math.min(1, (event.nativeEvent.wheelDelta || -event.nativeEvent.detail)));
-    event.currentTarget.scrollLeft -= (delta * 10);
-  }
-
+  
   return (
     <>
       <Wrapper>
