@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
 import sea from './assets/sea.png'
 import Cursor from './components/Cursor'
 import Header from './components/Header'
 import Menu from './components/Menu'
+import Detail from './Detail'
 
 const fadeIn = keyframes`
   0% {
@@ -34,15 +35,18 @@ const Background = styled.div`
   background: url(${sea}) no-repeat center/cover;
 `
 
-const Home = () =>  (
-  <Wrapper>
-    <Background />
-    <Cursor />
-    <Content>
-      <Header />
-      <Menu />
-    </Content>
-  </Wrapper>
-)
+const Home = () => {
+  const [city, setCity] = useState("");
+  return (
+    <Wrapper>
+      <Background />
+      <Cursor />
+      <Content>
+        <Header city={city} />
+        {city === "" ? <Menu setCity={setCity} /> : <Detail name={city} />}
+      </Content>
+    </Wrapper>
+  )
+}
 
 export default Home;

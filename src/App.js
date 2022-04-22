@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import Typewriter from 'typewriter-effect'
+import Home from './Home'
 import sea from './assets/sea.png'
 
 const Wrapper = styled.div`
@@ -21,19 +22,24 @@ const Text = styled.div`
   text-shadow: 3px 3px rgba(0, 0, 0, 0.05);
 `
 
-const App = () => (
-  <Wrapper>
-    <Text>
-      <Typewriter
-        onInit={(typewriter) => {
-          typewriter.typeString('hello,<br>this is eutina,<br>an amateur photographer<br>based in pittsburgh.')
-            .pauseFor(1000)
-            .deleteAll()
-            .start();
-        }}
-      />
-    </Text>
-  </Wrapper>
-)
+const App = ({root}) => {
+  useEffect(() => {
+    setTimeout(function() {root.render(<Home />);}, 18000);
+  })
+  return (
+    <Wrapper>
+      <Text>
+        <Typewriter
+          onInit={(typewriter) => {
+            typewriter.typeString('hello,<br>this is eutina,<br>an amateur photographer<br>based in pittsburgh.')
+              .pauseFor(1000)
+              .deleteAll()
+              .start();
+          }}
+        />
+      </Text>
+    </Wrapper>
+  )
+}
 
 export default App;

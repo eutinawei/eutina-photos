@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.button`
@@ -9,7 +9,7 @@ const Wrapper = styled.button`
   margin-right: 20px;
 `
 
-const Button = ({title}) => {
+const Button = ({title, city}) => {
   const titleRef = useRef(null);
   
   const mouseEnter = () => {
@@ -20,8 +20,20 @@ const Button = ({title}) => {
     titleRef.current.style.fontWeight = 'normal';
   }
 
+  const clickAction = () => {
+    if (title === "eutina wei") {
+      window.location.assign("/home");
+    }
+  }
+
+  useEffect(() => {
+    if (city !== "") {
+      titleRef.current.style.color = "black";
+    }
+  })
+
   return (
-    <Wrapper ref={titleRef} onMouseEnter={() => mouseEnter()} onMouseLeave={() => mouseLeave()}>
+    <Wrapper ref={titleRef} onMouseEnter={() => mouseEnter()} onMouseLeave={() => mouseLeave()} onClick={() => clickAction()}>
       {title}
     </Wrapper>
   )

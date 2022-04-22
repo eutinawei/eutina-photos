@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.button`
@@ -9,8 +9,18 @@ const Wrapper = styled.button`
   margin-right: 20px;
 `
 
-const Icon = ({img, link}) => (
-  <Wrapper img={img} onClick={()=> window.open(link, "_blank")}/>
-)
+const Icon = ({img, link, city}) => {
+  const iconRef = useRef();
+
+  useEffect(() => {
+    if (city !== "") {
+      iconRef.current.style.filter = 'invert(100%)';
+    }
+  })
+
+  return (
+    <Wrapper ref={iconRef} img={img} onClick={()=> window.open(link, "_blank")}/>
+  )
+}
 
 export default Icon;

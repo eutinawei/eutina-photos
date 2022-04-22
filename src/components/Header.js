@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import styled from 'styled-components'
 import Button from './Button'
 import Icon from './Icon'
@@ -24,18 +24,28 @@ const Navigation = styled.div`
   align-items: center;
 `
 
-const Header = () => (
-  <Outer>
-    <Wrapper>
-      <Button title='eutina wei' />
-      <Navigation>
-        <Button title='about' />
-        <Button title='contact' />
-        <Icon img={github} link='https://github.com/eutinawei/pui-hw8' />
-        <Icon img={linkedin} link='https://www.linkedin.com/in/eutinawei/' />
-      </Navigation>
-    </Wrapper>
-  </Outer>
-)
+const Header = ({city}) => {
+  const headerRef = useRef();
+
+  useEffect(() => {
+    if (city !== "") {
+      headerRef.current.style.background = "#ffffff";
+    }
+  })
+
+  return(
+    <Outer>
+      <Wrapper ref={headerRef}>
+        <Button title='eutina wei' city={city} />
+        <Navigation>
+          <Button title='about' city={city} />
+          <Button title='contact' city={city} />
+          <Icon img={github} link='https://github.com/eutinawei/pui-hw8' city={city} />
+          <Icon img={linkedin} link='https://www.linkedin.com/in/eutinawei/' city={city} />
+        </Navigation>
+      </Wrapper>
+    </Outer>
+  )
+}
 
 export default Header;

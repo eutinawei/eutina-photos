@@ -40,7 +40,7 @@ const locations = [
   },
 ]
 
-const Menu = () => {
+const Menu = ({setCity}) => {
   const backgroundRef = useRef(null);
   
   return (
@@ -48,7 +48,7 @@ const Menu = () => {
       <Wrapper>
         {locations.map(location => (
           <div key={location.name}>
-            <Location name={location.name} year={location.year} innerRef={backgroundRef} isActive={location.isActive} />
+            <Location name={location.name} year={location.year} backgroundRef={backgroundRef} isActive={location.isActive} setCity={setCity} />
             <Line />
           </div>
         ))}

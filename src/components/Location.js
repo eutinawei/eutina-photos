@@ -35,9 +35,9 @@ const Year = styled.div`
   margin-top: 5px;
 `
 
-const Location = ({isActive, name, year, innerRef}) => {
-  const dotRef = useRef(null);
-  const titleRef = useRef(null);
+const Location = ({isActive, name, year, backgroundRef, setCity}) => {
+  const dotRef = useRef();
+  const titleRef = useRef();
 
   const ChangeDotRef = (width, height, marginTop) => {
     dotRef.current.style.width = width;
@@ -79,28 +79,30 @@ const Location = ({isActive, name, year, innerRef}) => {
 
   useEffect(() => {
     ChangeDotSize(isActive, false);
-  });
-
-  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   });
 
   const mouseEnter = () => {
-    if (name === "boston") innerRef.current.style.background = `url(${boston}) no-repeat center/cover`;
-    if (name === "chicago") innerRef.current.style.background = `url(${chicago}) no-repeat center/cover`;
-    if (name === "washington dc") innerRef.current.style.background = `url(${dc}) no-repeat center/cover`;
-    innerRef.current.style.opacity = '1';
+    if (name === "boston") backgroundRef.current.style.background = `url(${boston}) no-repeat center/cover`;
+    if (name === "chicago") backgroundRef.current.style.background = `url(${chicago}) no-repeat center/cover`;
+    if (name === "washington dc") backgroundRef.current.style.background = `url(${dc}) no-repeat center/cover`;
+    backgroundRef.current.style.opacity = '1';
     ChangeDotSize(false, true);
   }
   
   const mouseLeave = () => {
     ChangeDotSize(isActive, false);
-    innerRef.current.style.opacity = '0';
+    backgroundRef.current.style.opacity = '0';
+  }
+
+  const toDetailPage = () => {
+    setCity(name);
   }
 
   return (
     <Wrapper>
-      <Dot isActive ref={dotRef} onMouseEnter={() => mouseEnter()} onMouseLeave={() => mouseLeave()} />
+      <Dot isActive ref={dotRef} onMouseEnter={() => mouseEnter()} onMouseLeave={() => mouseLeave()} onClick={() => toDetailPage()} />
       <Title ref={titleRef}>
         <Name>{name}</Name>
         <Year>{year}</Year>
