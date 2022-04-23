@@ -1,5 +1,14 @@
 import React, { useRef } from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`
 
 const Wrapper = styled.div`
   position: fixed;
@@ -11,7 +20,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.5s;
+  animation: ${fadeIn} 0.5s;
 `
 
 const Exit = styled.button`

@@ -18,6 +18,9 @@ const Image = styled.img`
   width: calc(80vw / 3 - 35px);
   height: auto;
   margin-bottom: 25px;
+  &:hover {
+    cursor: zoom-in;
+  }
 `
 
 const Pictures = ({name}) => {

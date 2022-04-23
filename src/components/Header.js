@@ -28,7 +28,7 @@ const Header = ({city}) => {
   const headerRef = useRef();
 
   useEffect(() => {
-    if (city !== "") {
+    if (city !== "" && city !== "about") {
       headerRef.current.style.background = "#ffffff";
     }
   })
@@ -38,8 +38,8 @@ const Header = ({city}) => {
       <Wrapper ref={headerRef}>
         <Button title='eutina wei' city={city} />
         <Navigation>
+          <Button title='home' city={city} />
           <Button title='about' city={city} />
-          <Button title='contact' city={city} />
           <Icon img={github} link='https://github.com/eutinawei/pui-hw8' city={city} />
           <Icon img={linkedin} link='https://www.linkedin.com/in/eutinawei/' city={city} />
         </Navigation>
