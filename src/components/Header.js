@@ -38,7 +38,6 @@ const Header = ({city}) => {
       <Wrapper ref={headerRef}>
         <Button title='eutina wei' city={city} />
         <Navigation>
-          <Button title='home' city={city} />
           <Button title='about' city={city} />
           <Icon img={github} link='https://github.com/eutinawei/pui-hw8' city={city} />
           <Icon img={linkedin} link='https://www.linkedin.com/in/eutinawei/' city={city} />

@@ -24,7 +24,7 @@ const Text = styled.div`
 
 const App = ({root}) => {
   useEffect(() => {
-    setTimeout(function() {root.render(<Home />);}, 18000);
+    setTimeout(function() {root.render(<Home />);}, 16000);
   })
   return (
     <Wrapper>
@@ -32,7 +32,8 @@ const App = ({root}) => {
         <Typewriter
           onInit={(typewriter) => {
             typewriter.typeString('hello,<br>this is eutina,<br>an amateur photographer<br>based in pittsburgh.')
-              .pauseFor(1000)
+              .pauseFor(100)
+              .changeDeleteSpeed(0.01)
               .deleteAll()
               .start();
           }}

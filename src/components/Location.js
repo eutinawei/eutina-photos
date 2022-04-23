@@ -35,9 +35,20 @@ const Year = styled.div`
   margin-top: 5px;
 `
 
+const TransitDot = styled.div`
+  position: fixed;
+  width: 0px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 0px;
+  transform: translate(-50%, -50%);
+`
+
 const Location = ({isActive, name, year, backgroundRef, setCity}) => {
   const dotRef = useRef();
   const titleRef = useRef();
+  const transitDotRef = useRef();
 
   const ChangeDotRef = (width, height, marginTop) => {
     dotRef.current.style.width = width;
@@ -89,6 +100,11 @@ const Location = ({isActive, name, year, backgroundRef, setCity}) => {
     if (name === "washington dc") backgroundRef.current.style.background = `url(${dc}) no-repeat center/cover`;
     backgroundRef.current.style.opacity = '1';
     ChangeDotSize(false, true);
+
+    let x = dotRef.current.getBoundingClientRect().x;
+    let y = dotRef.current.getBoundingClientRect().y;
+    transitDotRef.current.style.top = y + 'px';
+    transitDotRef.current.style.left = x + 'px';
   }
   
   const mouseLeave = () => {
@@ -97,12 +113,16 @@ const Location = ({isActive, name, year, backgroundRef, setCity}) => {
   }
 
   const toDetailPage = () => {
-    setCity(name);
+    transitDotRef.current.style.transition = '1s';
+    transitDotRef.current.style.width = '300vw';
+    transitDotRef.current.style.height = '300vw';
+    setTimeout(function() {setCity(name);}, 500);
   }
 
   return (
     <Wrapper>
       <Dot isActive ref={dotRef} onMouseEnter={() => mouseEnter()} onMouseLeave={() => mouseLeave()} onClick={() => toDetailPage()} />
+      <TransitDot ref={transitDotRef} />
       <Title ref={titleRef}>
         <Name>{name}</Name>
         <Year>{year}</Year>

@@ -21,7 +21,7 @@ const Button = ({title, city}) => {
   }
 
   const clickAction = () => {
-    if (title === "eutina wei" || title === "home") {
+    if (title === "eutina wei") {
       window.location.assign("/home");
     }
     if (title === "about") {

@@ -1,10 +1,21 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import Lightbox from './Lightbox'
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  transition: 0.5;
+  animation: ${fadeIn} 2s;
 `
 
 const Column = styled.div`

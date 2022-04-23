@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import styled from 'styled-components'
-import Location from './Location';
-import Line from './Line';
+import Location from './Location'
+import Line from './Line'
 
 const Wrapper = styled.div`
   position: absolute;
