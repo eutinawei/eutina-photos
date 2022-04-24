@@ -3,6 +3,7 @@
 ### Links
 - Firebase: https://eutinawei-photos.web.app
 - Figma: https://www.figma.com/file/iExbRvSMDcnD0pTudOfefX/Yu-Ting-Wei-HW7?node-id=0%3A1
+- Explanation Video: https://youtu.be/d0zWdW-wsog
 
 ### Description
 This website is my photography portfolio, and the purpose of this website is to display the photography I have taken after I came to the states. It mainly contains photos I took from Boston, Chicago, Washington DC, and Pittsburgh.
