@@ -6,7 +6,6 @@ import Pictures from './components/Pictures'
 const Wrapper = styled.div`
   background: white;
   min-height: 100vh;
-  min-padding: 120px;
   padding: 130px calc(50vw - (((80vw) / 3 - 40px) * 3 + 60px) / 2);
 `
 
