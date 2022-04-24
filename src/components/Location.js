@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import boston from '../assets/boston.jpg'
 import chicago from '../assets/chicago.jpg'
 import dc from '../assets/dc.jpg'
+import pittsburgh from '../assets/pittsburgh.jpg'
 
 const Wrapper = styled.div`
   width: 100px;
@@ -98,6 +99,7 @@ const Location = ({isActive, name, year, backgroundRef, setCity}) => {
     if (name === "boston") backgroundRef.current.style.background = `url(${boston}) no-repeat center/cover`;
     if (name === "chicago") backgroundRef.current.style.background = `url(${chicago}) no-repeat center/cover`;
     if (name === "washington dc") backgroundRef.current.style.background = `url(${dc}) no-repeat center/cover`;
+    if (name ==="pittsburgh") backgroundRef.current.style.background = `url(${pittsburgh}) no-repeat center/cover`;
     backgroundRef.current.style.opacity = '1';
     ChangeDotSize(false, true);
 

@@ -38,6 +38,11 @@ const locations = [
     year: "2021",
     isActive: false,
   },
+  {
+    name: "pittsburgh",
+    year: "2021",
+    isActive: false,
+  },
 ]
 
 const Menu = ({setCity}) => {
