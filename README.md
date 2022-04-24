@@ -1,7 +1,7 @@
 # PUI HW8
 
 ### Links
-- Firebase: https://eutinawei-photos.web.app
+- Firebase: https://eutina-photos.web.app
 - Figma: https://www.figma.com/file/iExbRvSMDcnD0pTudOfefX/Yu-Ting-Wei-HW7?node-id=0%3A1
 - Explanation Video: https://youtu.be/d0zWdW-wsog
 
@@ -11,8 +11,8 @@ This website is my photography portfolio, and the purpose of this website is to 
 I made the website engaging by designing and developing the home page with a scrollable timeline. The photos are categorized by location and timing, and users can scroll and click on the location they are interested in. Also, to make my website more interactive, on the detail page, users can click on a particular image to enlarge it.
 
 ### How to Use the Website
-- Enter the website using https://eutinawei-photos.web.app
-- ***If tired of the typewriter effect, just go to*** https://eutinawei-photos.web.app/home
+- Enter the website using https://eutina-photos.web.app
+- ***If tired of the typewriter effect, just go to*** https://eutina-photos.web.app/home
 - On the home page, scroll right to view different location options
 - To enter detail pages, hover or click on the dot of a certain location you prefer
 - Click on a image to enlarge it
