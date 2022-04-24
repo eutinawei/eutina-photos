@@ -11,7 +11,7 @@ d. Using the Website
 
 <br>
 e. External Libraries
-* React.js
-* react-router-dom
-* styled-components
-* typewriter-effect
+* React.js:
+* react-router-dom:
+* styled-components:
+* typewriter-effect:
