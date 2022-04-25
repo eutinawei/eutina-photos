@@ -41,8 +41,8 @@ const Home = () => {
     <Wrapper>
       <Background />
       <Cursor />
+      <Header city={city} />
       <Content>
-        <Header city={city} />
         {city === "" ? <Menu setCity={setCity} /> : <Detail name={city} />}
       </Content>
     </Wrapper>
