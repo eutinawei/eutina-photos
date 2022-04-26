@@ -12,7 +12,7 @@ I made the website engaging by designing and developing the home page with a scr
 
 ## How to Use the Website
 - Enter the website using https://eutina-photos.web.app
-- ***If tired of the typewriter effect, just go to*** https://eutina-photos.web.app/home
+- **If tired of the typewriter effect, just click on *eutina wei* or go to** https://eutina-photos.web.app/home
 - On the home page, scroll right to view different location options
 - To enter detail pages, hover or click on the dot of a certain location you prefer
 - Click on a image to enlarge it
