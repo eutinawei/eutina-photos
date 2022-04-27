@@ -7,14 +7,19 @@ import text from './constants/aboutText'
 
 const Wrapper = styled.div`
   margin: -8px;
+`
+
+const Background = styled.div`
+  position: fixed;
   width: 100vw;
   height: 100vh;
   background: url(${eutina}) no-repeat;
   background-position: right top;
   background-size: cover;
+  z-index: -1;
 `
 
-const Text = styled.p`
+const Text = styled.div`
   position: absolute;
   top: 130px;
   right: 70px;
@@ -28,6 +33,7 @@ const About = () => (
   <Wrapper>
     <Cursor />
     <Header city="about" />
+    <Background />
     <Text>{text}</Text>
   </Wrapper>
 )
