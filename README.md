@@ -2,7 +2,6 @@
 
 ## Links
 - Firebase: https://eutina-photos.web.app
-- Explanation Video: https://youtu.be/d0zWdW-wsog
 - Figma: https://www.figma.com/file/iExbRvSMDcnD0pTudOfefX/Yu-Ting-Wei-HW7?node-id=0%3A1
 
 ## Description
