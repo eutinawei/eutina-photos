@@ -1,4 +1,4 @@
-# PUI HW8
+# Eutina Photography Website
 
 ## Links
 - Firebase: https://eutina-photos.web.app
