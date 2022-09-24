@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/eutina-photos/static/css/main.b01d4993.css",
-    "main.js": "/eutina-photos/static/js/main.f514e6b6.js",
+    "main.js": "/eutina-photos/static/js/main.3794cb9b.js",
     "static/media/sea.png": "/eutina-photos/static/media/sea.ccfd8cb60042255d367b.png",
     "static/media/chicago.jpg": "/eutina-photos/static/media/chicago.5b75c22965fb6e7ffd84.jpg",
     "static/media/1.jpg": "/eutina-photos/static/media/1.9761cd6ece824a06a52c.jpg",
@@ -23,10 +23,10 @@
     "static/media/github.png": "/eutina-photos/static/media/github.f0674c9696ee4811208f.png",
     "index.html": "/eutina-photos/index.html",
     "main.b01d4993.css.map": "/eutina-photos/static/css/main.b01d4993.css.map",
-    "main.f514e6b6.js.map": "/eutina-photos/static/js/main.f514e6b6.js.map"
+    "main.3794cb9b.js.map": "/eutina-photos/static/js/main.3794cb9b.js.map"
   },
   "entrypoints": [
     "static/css/main.b01d4993.css",
-    "static/js/main.f514e6b6.js"
+    "static/js/main.3794cb9b.js"
   ]
 }
