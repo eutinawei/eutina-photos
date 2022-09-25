@@ -24,6 +24,9 @@ const Button = ({title, city}) => {
     if (title === "eutina wei") {
       window.location.assign("/home");
     }
+    if (title === "thoughts") {
+      window.location.assign("/thoughts");
+    }
     if (title === "about") {
       window.location.assign("/about");
     }

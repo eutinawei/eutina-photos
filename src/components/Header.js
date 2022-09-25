@@ -2,8 +2,7 @@ import React, { useRef, useEffect } from 'react'
 import styled from 'styled-components'
 import Button from './Button'
 import Icon from './Icon'
-import github from '../assets/github.png'
-import linkedin from '../assets/linkedin.png'
+import youtube from '../assets/youtube.png'
 
 const Outer = styled.div`
   position: fixed;
@@ -38,9 +37,9 @@ const Header = ({city}) => {
       <Wrapper ref={headerRef}>
         <Button title='eutina wei' city={city} />
         <Navigation>
+          <Button title="thoughts" city={city} />
           <Button title='about' city={city} />
-          <Icon img={github} link='https://github.com/eutinawei/pui-hw8' city={city} />
-          <Icon img={linkedin} link='https://www.linkedin.com/in/eutinawei/' city={city} />
+          <Icon img={youtube} link='https://www.youtube.com/channel/UCVyNVbdtiNWfPriaf1Jqpcg' city={city} />
         </Navigation>
       </Wrapper>
     </Outer>
