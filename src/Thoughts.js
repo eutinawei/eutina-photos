@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Cursor from './components/Cursor'
 import Header from './components/Header'
 import ThoughtPreview from './components/ThoughtPreview'
+import { forDesktop, forMobile } from './constants/breakpoints'
 
 const Wrapper = styled.div`
   margin: -8px;
@@ -17,7 +18,12 @@ const Background = styled.div`
 `
 
 const ThoughtList = styled.div`
-  padding: 200px 0 0 15vw;
+  ${forDesktop} {
+    padding: 200px 0 0 15vw;
+  }
+  ${forMobile} {
+    padding-top: 200px;
+  }
 `
 
 const Thoughts = () => (

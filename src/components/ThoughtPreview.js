@@ -3,8 +3,6 @@ import styled from 'styled-components'
 import thoughts from '../constants/thoughts'
 import { forMobile } from '../constants/breakpoints'
 
-const Wrapper = styled.div``
-
 const Link = styled.a`
   all: unset;
   &:hover {
@@ -15,6 +13,7 @@ const Link = styled.a`
 const ThoughtWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
   ${forMobile} {
     flex-direction: column;
   }
@@ -58,7 +57,7 @@ const Text = styled.div`
 `
 
 const ThoughtPreview = () => (
-  <Wrapper>
+  <>
     {thoughts.map(thought => (
       <Link href={`${process.env.PUBLIC_URL}/thought/${thought.key}`}>
         <ThoughtWrapper key={thought.key}>
@@ -71,7 +70,7 @@ const ThoughtPreview = () => (
         </ThoughtWrapper>
       </Link>
     ))}
-  </Wrapper>
+  </>
 )
 
 export default ThoughtPreview
