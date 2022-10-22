@@ -1,7 +1,7 @@
 # Eutina Photography Website
 
 ## Links
-- Firebase: https://eutina-photos.web.app
+- Website: https://eutinawei.com
 - Figma: https://www.figma.com/file/iExbRvSMDcnD0pTudOfefX/Yu-Ting-Wei-HW7?node-id=0%3A1
 
 ## Description
