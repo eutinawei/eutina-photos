@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import styled, { keyframes } from 'styled-components'
+import { forDesktop, forMobile } from '../constants/breakpoints'
 
 const fadeIn = keyframes`
   0% {
@@ -25,8 +26,8 @@ const Wrapper = styled.div`
 
 const Exit = styled.button`
   position: fixed;
-  top: 10vh;
-  right: 10vw;
+  top: 8vh;
+  right: 8vw;
   font-family: 'Arial';
   font-size: 30px;
   background: transparent;
@@ -35,10 +36,16 @@ const Exit = styled.button`
 
 const Image = styled.img`
   width: auto;
-  max-width: 50%;
   height: auto;
-  max-height: 80%;
   object-fit: cover;
+  ${forDesktop} {
+    max-width: 50%;
+    max-height: 80%;
+  }
+  ${forMobile} {
+    max-width: 80%;
+    max-height: 80%;
+  }
 `
 
 const Lightbox = ({image, setLightboxImage}) => {
