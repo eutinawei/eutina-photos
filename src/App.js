@@ -46,7 +46,7 @@ const App = ({root}) => {
       <Text>
         <Typewriter
           onInit={(typewriter) => {
-            typewriter.typeString('hello,<br>this is eutina,<br>an amateur photographer<br>based in pittsburgh.')
+            typewriter.typeString('hello,<br>this is eutina,<br>an amateur photographer<br>based in helena.')
               .pauseFor(100)
               .changeDeleteSpeed(0.01)
               .deleteAll()

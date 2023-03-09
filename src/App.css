@@ -25,3 +25,7 @@ html {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+.bm-cross {
+  background: white;
+}

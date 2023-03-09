@@ -4,6 +4,7 @@ import Cursor from './components/Cursor'
 import Header from './components/Header'
 import eutina from './assets/eutina.jpg'
 import text from './constants/aboutText'
+import { forDesktop, forMobile } from './constants/breakpoints'
 
 const Wrapper = styled.div`
   margin: -8px;
@@ -16,14 +17,25 @@ const Background = styled.div`
   background: url(${eutina}) no-repeat;
   background-position: right top;
   background-size: cover;
-  z-index: -1;
+  z-index: -5;
 `
 
-const Text = styled.div`
+const TextWrapper = styled.div`
   position: absolute;
   top: 130px;
   right: 70px;
-  width: calc(100vw / 2);
+  height: calc(100vh - 150px);
+  overflow: scroll;
+  z-index: -1;
+  ${forDesktop} {
+    width: calc(100vw / 2);
+  }
+  ${forMobile} {
+    width: calc(100vw / 3 * 2);
+  }
+`
+
+const Text = styled.div`
   text-align: right;
   line-height: 25px;
   white-space: pre-wrap;
@@ -34,7 +46,9 @@ const About = () => (
     <Cursor />
     <Header city="about" />
     <Background />
-    <Text>{text}</Text>
+    <TextWrapper>
+      <Text>{text}</Text>
+    </TextWrapper>
   </Wrapper>
 )
 
