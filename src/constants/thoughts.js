@@ -1,5 +1,12 @@
 const thoughts = [
   {
+    "key": "artmuseum",
+    "title": "Art Museums",
+    "date": "march 26, 2023",
+    "image": "artmuseum",
+    "text": "Art museums are, the majority of the time, particularly intimidating and incredibly humbling. Before entering one, I must be aware and fully embrace the fact that I barely know anything, it is impossible to realize complete empathy inside (though it is also the case outside, or more precisely, in all directions and all manner of ways), and there exists no objective perfection. Nonetheless, the acknowledgment of the above facts does not stop me from trying. On the contrary, it has been the deep understanding of how powerless I am and how uncontrollable the experience is that allows me to walk in assuringly.\n\nBeing surrounded by art, I concentrate on dissolving my physical body and projecting my life experiences, emotions, beliefs, and soul into art pieces. This is the only thing I can do. No matter how transparent my physical self becomes, I still exist, I am still standing, and humans can never turn into mirrors. Those artists’ life experiences, emotions, beliefs, and souls pervade the environment, yet I can only imagine and absorb them without the ability to perfectly reflect.\n\nRegardless, this whole process and the struggling attempts of communication are precisely the beauty of visiting art museums. It is the weight of expectations and those irrefutable failures that keeps me going."
+  },
+  {
     "key": "goldenpavilion",
     "title": "The Temple of the Golden Pavilion by Yukio Mishima",
     "date": "march 02, 2022",
