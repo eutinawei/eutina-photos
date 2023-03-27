@@ -24,7 +24,7 @@ const ThoughtWrapper = styled.div`
 
 const Image = styled.img`
   width: 70vw;
-  height: 300px;
+  height: 50vh;
   object-fit: cover;
   border-radius: 10px;
 `
