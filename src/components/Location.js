@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
+import helena from '../assets/helena.jpg'
 import sf from '../assets/sf.jpg';
 import boston from '../assets/boston.jpg'
 import chicago from '../assets/chicago.jpg'
@@ -101,6 +102,7 @@ const Location = ({city, setCity, backgroundRef}) => {
   });
 
   const mouseEnter = () => {
+    if (name === "helena") backgroundRef.current.style.background = `url(${helena}) no-repeat center/cover`;
     if (name === "san francisco") backgroundRef.current.style.background = `url(${sf}) no-repeat center/cover`;
     if (name === "boston") backgroundRef.current.style.background = `url(${boston}) no-repeat center/cover`;
     if (name === "chicago") backgroundRef.current.style.background = `url(${chicago}) no-repeat center/cover`;
