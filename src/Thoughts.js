@@ -29,7 +29,7 @@ const ThoughtList = styled.div`
 const Thoughts = () => (
   <Wrapper>
     <Cursor />
-    <Header />
+    <Header city="thoughts" />
     <Background />
     <ThoughtList>
       <ThoughtPreview />

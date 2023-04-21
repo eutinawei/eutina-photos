@@ -61,7 +61,7 @@ const Text = styled.div`
 const ThoughtPreview = () => (
   <>
     {thoughts.map(thought => (
-      <Link href={`${process.env.PUBLIC_URL}/thought/${thought.key}`}>
+      <Link key={thought.key} href={`${process.env.PUBLIC_URL}/thought/${thought.key}`}>
         <ThoughtWrapper key={thought.key}>
           <Image src={require('../assets/thoughts/' + thought.image + '.jpg')}/>
           <TextWrapper>
