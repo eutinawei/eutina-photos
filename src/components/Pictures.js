@@ -38,7 +38,7 @@ const Image = styled.img`
   }
 `
 
-const Pictures = ({name}) => {
+const Pictures = ({name, photoCount}) => {
   const [lightboxImage, setLightboxImage] = useState("");
   const [width, setWidth] = useState(window.innerWidth);
   window.addEventListener('resize', () => setWidth(window.innerWidth));
@@ -50,18 +50,31 @@ const Pictures = ({name}) => {
   let imagesCol0 = [];
   let imagesCol1 = [];
   let imagesCol2 = [];
-  let imagesCol3 = [];
-  for (let i = 0; i < 4; i++) {
+  let imagesColMobile = [];
+
+  let row0Count = Math.floor(photoCount / 3);
+  let row1Count = Math.floor(photoCount / 3);
+
+  let remainer = photoCount % 3;
+  if (remainer === 1) {
+    row0Count += 1;
+  }
+  else if (remainer === 2) {
+    row0Count += 1;
+    row1Count += 1;
+  }
+
+  for (let i = 0; i < row0Count; i++) {
     imagesCol0.push(<Image key={name+"_"+i} src={require('../assets/' + name + '/' + i + '.jpg')} onClick={() => openLightbox(name+"_"+i)} />);
   }
-  for (let i = 4; i < 8; i++) {
+  for (let i = row0Count; i < row0Count + row1Count; i++) {
     imagesCol1.push(<Image key={name+"_"+i} src={require('../assets/' + name + '/' + i + '.jpg')} onClick={() => openLightbox(name+"_"+i)} />);
   }
-  for (let i = 8; i < 12; i++) {
+  for (let i = row0Count + row1Count; i < photoCount; i++) {
     imagesCol2.push(<Image key={name+"_"+i} src={require('../assets/' + name + '/' + i + '.jpg')} onClick={() => openLightbox(name+"_"+i)} />);
   }
-  for (let i = 0; i < 12; i++) {
-    imagesCol3.push(<Image key={name+"_"+i} src={require('../assets/' + name + '/' + i + '.jpg')} onClick={() => openLightbox(name+"_"+i)} />);
+  for (let i = 0; i < photoCount; i++) {
+    imagesColMobile.push(<Image key={name+"_"+i} src={require('../assets/' + name + '/' + i + '.jpg')} onClick={() => openLightbox(name+"_"+i)} />);
   }
 
   return (
@@ -77,7 +90,7 @@ const Pictures = ({name}) => {
         <Column>
           {imagesCol2}
         </Column>
-      </> : <Column>{imagesCol3}</Column>}
+      </> : <Column>{imagesColMobile}</Column>}
       
     </Wrapper>
   )

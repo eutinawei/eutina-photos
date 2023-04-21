@@ -44,7 +44,7 @@ const Home = () => {
       <Cursor />
       <Header city={city.name} />
       <Content>
-        {city.name === undefined ? <Menu cities={cities} setCity={setCity} /> : <Detail name={city.name} />}
+        {city.name === undefined ? <Menu cities={cities} setCity={setCity} /> : <Detail name={city.name} photoCount={city.photoCount} />}
       </Content>
     </Wrapper>
   )

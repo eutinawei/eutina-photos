@@ -9,10 +9,10 @@ const Wrapper = styled.div`
   padding: 130px calc(50vw - (((80vw) / 3 - 40px) * 3 + 60px) / 2);
 `
 
-const Detail = ({name}) => (
+const Detail = ({name, photoCount}) => (
   <Wrapper>
     <Name name={name} />
-    <Pictures name={name} />
+    <Pictures name={name} photoCount={photoCount} />
   </Wrapper>
 )
 
