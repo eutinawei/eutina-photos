@@ -32,6 +32,7 @@ const Exit = styled.button`
   font-size: 30px;
   background: transparent;
   border: 0;
+  color: black;
 `
 
 const Image = styled.img`
@@ -39,7 +40,7 @@ const Image = styled.img`
   height: auto;
   object-fit: cover;
   ${forDesktop} {
-    max-width: 50%;
+    max-width: 70%;
     max-height: 80%;
   }
   ${forMobile} {
