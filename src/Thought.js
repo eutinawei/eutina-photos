@@ -58,7 +58,7 @@ const Thought = () => {
   return (
     <Wrapper>
       <Cursor />
-      <Header />
+      <Header city="thought" />
       <Background />
       <ThoughtWrapper>
         <Image src={require('./assets/thoughts/' + thisThought.image + '.jpg')} />
