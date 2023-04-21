@@ -21,39 +21,15 @@ const Background = styled.div`
   transition: opacity 0.8s;
 `
 
-
-const locations = [
-  {
-    name: "boston",
-    year: "2022",
-    isActive: true,
-  },
-  {
-    name: "chicago",
-    year: "2021",
-    isActive: false,
-  },
-  {
-    name: "washington dc",
-    year: "2021",
-    isActive: false,
-  },
-  {
-    name: "pittsburgh",
-    year: "2021",
-    isActive: false,
-  },
-]
-
-const Menu = ({setCity}) => {
+const Menu = ({cities, setCity}) => {
   const backgroundRef = useRef(null);
   
   return (
     <>
       <Wrapper>
-        {locations.map(location => (
-          <div key={location.name}>
-            <Location name={location.name} year={location.year} backgroundRef={backgroundRef} isActive={location.isActive} setCity={setCity} />
+        {cities.map(city => (
+          <div key={city.name}>
+            <Location city={city} setCity={setCity} backgroundRef={backgroundRef} />
             <Line />
           </div>
         ))}

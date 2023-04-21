@@ -61,10 +61,10 @@ const Header = ({city}) => {
   const headerRef = useRef();
 
   useEffect(() => {
-    if (city !== "" && city !== "about") {
+    if (city !== undefined && city !== "" && city !== "about") {
       headerRef.current.style.background = "#ffffff";
     }
-    if (city !== "") {
+    if (city !== undefined && city !== "") {
       setBurgerColor("black");
     }
   }, [city])

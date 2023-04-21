@@ -13,7 +13,7 @@ const Icon = ({img, link, city}) => {
   const iconRef = useRef();
 
   useEffect(() => {
-    if (city !== "") {
+    if (city !== undefined && city !== "") {
       iconRef.current.style.filter = 'invert(100%)';
     }
   })

@@ -46,10 +46,14 @@ const TransitDot = styled.div`
   transform: translate(-50%, -50%);
 `
 
-const Location = ({isActive, name, year, backgroundRef, setCity}) => {
+const Location = ({city, setCity, backgroundRef}) => {
   const dotRef = useRef();
   const titleRef = useRef();
   const transitDotRef = useRef();
+
+  let isActive = city.isActive;
+  let name = city.name;
+  let year = city.year;
 
   const ChangeDotRef = (width, height, marginTop) => {
     dotRef.current.style.width = width;
@@ -118,7 +122,7 @@ const Location = ({isActive, name, year, backgroundRef, setCity}) => {
     transitDotRef.current.style.transition = '1s';
     transitDotRef.current.style.width = '300vw';
     transitDotRef.current.style.height = '300vw';
-    setTimeout(function() {setCity(name);}, 500);
+    setTimeout(function() {setCity(city);}, 500);
   }
 
   return (

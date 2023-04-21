@@ -33,7 +33,7 @@ const Button = ({title, city}) => {
   }
 
   useEffect(() => {
-    if (city !== "") {
+    if (city !== undefined && city !== "") {
       titleRef.current.style.color = "black";
     }
   })

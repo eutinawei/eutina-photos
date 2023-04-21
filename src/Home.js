@@ -5,6 +5,7 @@ import Cursor from './components/Cursor'
 import Header from './components/Header'
 import Menu from './components/Menu'
 import Detail from './Detail'
+import cities from './constants/cities'
 
 const fadeIn = keyframes`
   0% {
@@ -36,14 +37,14 @@ const Background = styled.div`
 `
 
 const Home = () => {
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState({});
   return (
     <Wrapper>
       <Background />
       <Cursor />
-      <Header city={city} />
+      <Header city={city.name} />
       <Content>
-        {city === "" ? <Menu setCity={setCity} /> : <Detail name={city} />}
+        {city.name === undefined ? <Menu cities={cities} setCity={setCity} /> : <Detail name={city.name} />}
       </Content>
     </Wrapper>
   )
