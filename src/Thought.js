@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useParams } from "react-router-dom";
+import { forMobile } from './constants/breakpoints'
 import Cursor from './components/Cursor'
 import Header from './components/Header'
 import thoughts from './constants/thoughts'
@@ -27,6 +28,9 @@ const Image = styled.img`
   height: 50vh;
   object-fit: cover;
   border-radius: 10px;
+  ${forMobile} {
+    height: 20vh;
+  }
 `
 
 const Title = styled.div`
